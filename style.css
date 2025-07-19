@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Use flexbox for body */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     min-height: 100vh;
     background-color: #f4f4f4;
     margin: 0;
@@ -13,14 +14,18 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     width: 100%;
     max-width: 1000px; /* Increased max-width to accommodate map and form side-by-side */
+    margin: 20px; /* Add margin around the container */
+    display: flex; /* Use flexbox for container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+    text-align: center; /* Ensure h1 remains centered */
 }
 
 .main-content {
@@ -28,6 +33,7 @@ h1 {
     justify-content: space-between; /* Distribute space between map and form */
     align-items: flex-start; /* Align items to the top */
     gap: 20px; /* Space between map and form */
+    width: 100%; /* Ensure main-content takes full width of container */
 }
 
 #map {
@@ -82,12 +88,18 @@ button:hover {
 
 .result {
     margin-top: 25px;
-    padding-top: 20px;
+    padding: 20px;
     border-top: 1px solid #eee;
+    
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Limit max width */
+    text-align: center; /* Center text within result box */
 }
 
 .result p {
-    font-size: 18px;
+    font-size: 20px; /* フォントサイズを大きく */
     color: #333;
     margin: 10px 0;
 }
@@ -95,4 +107,5 @@ button:hover {
 .result span {
     font-weight: bold;
     color: #007bff;
+    font-size: 22px; /* フォントサイズをさらに大きく */
 }
