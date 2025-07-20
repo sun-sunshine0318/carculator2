@@ -24,7 +24,7 @@ body {
 
 h1 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* 余白を増やす */
     text-align: center; /* Ensure h1 remains centered */
 }
 
