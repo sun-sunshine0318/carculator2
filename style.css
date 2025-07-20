@@ -31,15 +31,16 @@ h1 {
 .main-content {
     display: flex;
     justify-content: space-between; /* Distribute space between map and form */
-    align-items: flex-start; /* Align items to the top */
+    align-items: stretch; /* Align items to stretch to fill the container */
     gap: 20px; /* Space between map and form */
     width: 100%; /* Ensure main-content takes full width of container */
 }
 
 #map {
-    height: 600px; /* Double the height */
+    /* height: 600px; */ /* Remove fixed height */
     width: 600px; /* Set a fixed width for the map */
     border: 1px solid #ddd;
+    flex-grow: 1; /* Allow map to grow and fill available height */
 }
 
 .form-section {
