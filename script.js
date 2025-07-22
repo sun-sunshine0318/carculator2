@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const etcCostSpan = document.getElementById('etcCost');
     const totalCostSpan = document.getElementById('totalCost');
     const routeOptionsDiv = document.getElementById('routeOptions');
+    const swapLocationsButton = document.getElementById('swapLocationsButton');
 
     // Google Maps related variables
     let directionsService;
@@ -263,6 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event Listeners
+    swapLocationsButton.addEventListener('click', () => {
+        const temp = departureLocationInput.value;
+        departureLocationInput.value = destinationLocationInput.value;
+        destinationLocationInput.value = temp;
+        calculateDistance(); // Recalculate the route
+    });
+
     departureLocationInput.addEventListener('change', calculateDistance);
     destinationLocationInput.addEventListener('change', calculateDistance);
     departureDateTimeInput.addEventListener('change', () => {
