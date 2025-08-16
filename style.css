@@ -26,6 +26,7 @@ h1 {
     color: #333;
     margin-bottom: 40px; /* 余白を増やす */
     text-align: center; /* Ensure h1 remains centered */
+    font-size: 2.5em; /* 文字サイズを大きく */
 }
 
 .main-content {
@@ -109,4 +110,57 @@ button:hover {
     font-weight: bold;
     color: #007bff;
     font-size: 22px; /* フォントサイズをさらに大きく */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column; /* Stack map and form vertically on smaller screens */
+        align-items: center; /* Center items when stacked */
+    }
+
+    #map {
+        width: 100%; /* Make map full width */
+        height: 400px; /* Set a fixed height for the map on smaller screens */
+        margin-bottom: 20px; /* Add space below the map */
+    }
+
+    .form-section {
+        width: 100%; /* Make form full width */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .result p {
+        font-size: 18px;
+    }
+
+    .result span {
+        font-size: 20px;
+    }
+}
+
+.annotation-text {
+    color: #888;
+    font-size: 0.6em;
+    line-height: 0.7;
+}
+
+.annotation-text br {
+    display: block;
+    content: "";
+    margin-top: -5px;
 }
